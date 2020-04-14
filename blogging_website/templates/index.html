@@ -1,0 +1,35 @@
+{% load static %}
+<html>
+    <head>
+        <title>login_page</title>
+        <link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/sugnup.css' %}"/>
+    </head>
+    <style>
+      #home1{
+		position:absolute;
+		left:5%;
+		top:5%;
+		height:20px;
+		width:100px;
+		color:black;
+	}
+    </style>
+        <div class="testbox">
+          <h1>Registration</h1>
+        
+          <form action="" method="post">
+            {% csrf_token %}
+          <label id="icon" for="name"><i class="icon-envelope "></i></label>
+          <input type="text" name="email" id="name" placeholder="Email" required/>
+          <label id="icon" for="name"><i class="icon-user"></i></label>
+          <input type="text" name="name" id="name" placeholder="Name" required/>
+          <label id="icon" for="name"><i class="icon-shield"></i></label>
+          <input type="password" name="pwd" id="name" placeholder="Password" required/>
+          <input type="submit" value="Register" id="submit1" class="button"/>
+          </form>
+        </div>
+        <h1>{{Message}}</h1>
+        <a href="/" id="home1"><button><h2>home</h2></button></a>
+</html>

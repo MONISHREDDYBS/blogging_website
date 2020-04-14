@@ -1,0 +1,16 @@
+#img1{
+    position:absolute;
+    height:100%;
+    width:60%;
+}
+div{
+    position:absolute;
+    left:70%;
+    top:30%;
+    text-decoration: none;
+}
+#bt1{
+    width:200px;
+    height:60px;
+    background-color: chartreuse;
+}

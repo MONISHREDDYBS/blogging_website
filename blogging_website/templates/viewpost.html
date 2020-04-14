@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>{{post.title}}</title>
+    </head>
+    <style>
+        input{
+            height:50px;
+            width:100%;
+            background-color:aqua;
+        }
+        button{
+            height:50px;
+            width:100%;
+            background-color:aqua;
+        }
+    </style>
+    <body>
+        <h1>{{post.title}}</h1>
+        <p>{{post.description}}</p>
+        <form action="" method="post">
+            {% csrf_token %}
+            <input type="submit" name="submit" value="like"/>
+        </form>
+        <button><a href="comments">Comment</a></button>
+    </body>
+</html>

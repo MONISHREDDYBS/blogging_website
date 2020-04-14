@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>My blogs</h2>
+  <div class="list-group">
+    {% for blog in posts %}
+    <a href="{% url 'edit_profile' pk=blog.pk %}"  class="list-group-item"><h3>{{blog.title}}</h3><span><h3 style="color:green">{{blog.count}}</h3></span></a>
+    {% endfor %}
+  </div>
+</div>
+
+</body>
+</html>
